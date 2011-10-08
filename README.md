@@ -2,12 +2,12 @@
     var twitterbot = require('./lib/bot.js');
     
     var bot = twitterbot.create({
-      key:'KEY',
-    	secret:'SECRET',
-    	user_key:'USERKEY',
-    	user_secret:'USERSECRET'
+        key:'KEY',
+    	key_secret:'SECRET',
+    	token_key:'USERKEY',
+    	token_secret:'USERSECRET'
     });
 
-    bot.post("Hello World");`
+    bot.post("Hello World");
     
 Easy!
