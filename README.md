@@ -5,7 +5,7 @@ then hopefully it helps you get up and running!
 
 Requires [node-oauth](https://github.com/ciaranj/node-oauth) to run.
 
-##Hello World
+##Posting to your Account
 To post a tweet to your bot's profile:
     var twitterbot = require('./lib/bot.js');
     
