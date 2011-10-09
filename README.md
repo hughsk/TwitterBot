@@ -30,5 +30,12 @@ to save space:
     
 ##Getting Mentions of your Account
     bot.mentions(40, function(err, response) {
-        console.log(response);
+        if (err) {console.log(err); return;}
+        for (var i = 0, l = response.length; i < l; i++) {
+    		console.log('[MENTION] '+response[i].text);
+    	}
     });
+    
+The above code will retrieve the 40 most recent mentions of your bot, and print their text to
+the console. There's a lot more data in that response object for you to play around with
+but that's the simplest approach.
