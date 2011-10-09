@@ -6,6 +6,7 @@ then hopefully it helps you get up and running!
 Requires [node-oauth](https://github.com/ciaranj/node-oauth) to run.
 
 ##Hello World
+To post a tweet to your bot's profile:
     var twitterbot = require('./lib/bot.js');
     
     var bot = twitterbot.create({
@@ -17,7 +18,7 @@ Requires [node-oauth](https://github.com/ciaranj/node-oauth) to run.
 
     bot.post("Hello World");
     
-Easy! You'll have to fill in the variables to match your Twitter app and
+Easy, right? You'll have to fill in the authentication details to match your Twitter app and
 account of course. This also works the same as above, if you really want
 to save space:
 
@@ -25,4 +26,9 @@ to save space:
         post: "Hello World",
         key: 'KEY', key_secret: 'SECRET',
         token_key:'USERKEY', token_secret:'USERSECRET'
+    });
+    
+##Getting Mentions of your Account
+    bot.mentions(40, function(err, response) {
+        console.log(response);
     });
