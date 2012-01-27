@@ -7,6 +7,7 @@ Requires [node-oauth](https://github.com/ciaranj/node-oauth) to run.
 
 ##Posting to your Account
 To post a tweet to your bot's profile:
+    
     var twitterbot = require('./lib/bot.js');
     
     var bot = twitterbot.create({
@@ -19,8 +20,7 @@ To post a tweet to your bot's profile:
     bot.post("Hello World");
     
 Easy, right? You'll have to fill in the authentication details to match your Twitter app and
-account of course. This also works the same as above, if you really want
-to save space:
+account of course. You can include `post` as a parameter to post straight away too:
 
     require('./lib/bot.js').create({
         post: "Hello World",
@@ -29,6 +29,7 @@ to save space:
     });
     
 ##Getting Mentions of your Account
+
     bot.mentions(40, function(err, response) {
         if (err) {console.log(err); return;}
         for (var i = 0, l = response.length; i < l; i++) {
